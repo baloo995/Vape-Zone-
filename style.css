@@ -1,11 +1,18 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
+/* RESET */
+* {
   margin: 0;
   padding: 0;
-  background-color: #f0f8ff;
-  color: #333;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* HEADER */
 header {
   background-color: #1e2a38;
   color: white;
@@ -15,7 +22,6 @@ header {
 
 nav ul {
   list-style: none;
-  padding: 0;
   margin-top: 10px;
 }
 
@@ -28,8 +34,14 @@ nav ul li a {
   color: #ffdd57;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s;
 }
 
+nav ul li a:hover {
+  color: #ffffff;
+}
+
+/* BANNIÈRE */
 .banniere img {
   width: 100%;
   max-height: 180px;
@@ -37,11 +49,16 @@ nav ul li a {
   border-bottom: 5px solid #0077cc;
 }
 
-.intro, main h2, main h3 {
+/* INTRO */
+.intro {
   text-align: center;
-  padding: 20px;
+  padding: 30px;
+  background-color: #e6f7ff;
+  border-radius: 10px;
+  margin: 20px;
 }
 
+/* PRODUITS */
 .produit {
   display: flex;
   align-items: center;
@@ -50,6 +67,11 @@ nav ul li a {
   margin: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px #ccc;
+  transition: transform 0.3s;
+}
+
+.produit:hover {
+  transform: scale(1.02);
 }
 
 .produit img {
@@ -68,5 +90,86 @@ nav ul li a {
   padding: 10px 15px;
   background-color: #0077cc;
   color: white;
-  text-decoration
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn-panier:hover {
+  background-color: #005fa3;
+}
+
+/* FORMULAIRE CONTACT */
+form {
+  max-width: 600px;
+  margin: 30px auto;
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+form button:hover {
+  background-color: #218838;
+}
+
+/* PANIER */
+table {
+  width: 90%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 0 10px #ccc;
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #0077cc;
+  color: white;
+}
+
+.total {
+  text-align: right;
+  margin: 20px 5%;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+  background-color: #1e2a38;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
 }
